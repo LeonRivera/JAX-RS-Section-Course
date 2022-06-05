@@ -1,0 +1,8 @@
+org\aguzman\webapp\jaxws\controllers\CursoRestController.class
+org\aguzman\webapp\jaxws\repositories\CursoRepositoryImpl.class
+org\aguzman\webapp\jaxws\models\Curso.class
+org\aguzman\webapp\jaxws\models\Instructor.class
+org\aguzman\webapp\jaxws\repositories\CursoRepository.class
+org\aguzman\webapp\jaxws\ProducerEntityManager.class
+org\aguzman\webapp\jaxws\services\CursoServiceImpl.class
+org\aguzman\webapp\jaxws\services\CursoService.class

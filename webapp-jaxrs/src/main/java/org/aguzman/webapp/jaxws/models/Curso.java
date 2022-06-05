@@ -3,6 +3,7 @@ package org.aguzman.webapp.jaxws.models;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.CascadeType;
@@ -30,7 +31,8 @@ public class Curso{
     
     // @JsonbTransient //not includes Instructor in the json
     // @JsonIgnore //same as up
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"cursos", "handler", "hibernateLazyInitializer"})
     // @JoinColumn(name = "instructor")  //by default it tries to search for curso.instructor_id and gets error
     private Instructor instructor;
 
